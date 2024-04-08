@@ -1,4 +1,8 @@
-
+/**
+ * 这一份测试点用来测试，当任务量比较少时，多个worker出现无事可做，线程池的性能表现
+ * 
+ * 经测试，在worker比较多时，this_thread::yield的处理方式不如使用条件变量等待
+*/
 #include <iostream>
 #include <chrono>
 
